@@ -228,8 +228,6 @@ def run(
                     # from serial_pub_nocv import yolo_serial
 
                     if cls == 1 and conf >= 0.90:
-                        print("(%g, %g)\n" % (x_cp_det, y_cp_det))
-                        
                         # yolo_ser = yolo_serial(x_cp_det, y_cp_det, x_cp_sp, y_cp_sp)
                         x_err = x_cp_det - x_cp_sp
                         y_err = y_cp_det - y_cp_sp
@@ -237,7 +235,8 @@ def run(
                         # x_err = yolo_ser.x
                         # y_err = yolo_ser.y
 
-                        print(f"SP: ({x_cp_sp}, {y_cp_sp}), Detected CP: ({x_cp_det}, {y_cp_det})\n")
+                        print("SP: (%g, %g)", (x_cp_sp, y_cp_sp))
+                        print("Detected: (%g, %g)\n" % (x_cp_det, y_cp_det))
                         print("Error: (%g, %g)\n" % (x_err, y_err))
                     
                     # Object 1: Class 0, Confidence: 0.19391992688179016, Coordinates: (2, 0), (146, 480)
