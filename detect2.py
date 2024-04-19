@@ -236,7 +236,8 @@ def run(
 
                         # x_err = yolo_ser.x
                         # y_err = yolo_ser.y
-                        
+
+                        print(f"SP: ({x_cp_sp}, {y_cp_sp}), Detected CP: ({x_cp_det}, {y_cp_det})\n")
                         print("Error: (%g, %g)\n" % (x_err, y_err))
                     
                     # Object 1: Class 0, Confidence: 0.19391992688179016, Coordinates: (2, 0), (146, 480)
