@@ -253,7 +253,7 @@ def run(
                             #ser.write(str(1).encode())
                             ser.write(f'{10}\n'.encode('utf-8'))
                             
-                            time.sleep(1)
+                            time.sleep(0.3)
 
                             ser.close()
 
