@@ -222,7 +222,8 @@ def run(
                     # (x1, y1) top-left
                     print(f"Object {i+1}: Class {int(cls)}, Confidence: {conf}, Coordinates: ({x1}, {y1}), ({x2}, {y2})")
 
-                    x_tol_err = 45 # tolerated x error
+                    x_tol_err_neg = 20 # tolerated x error
+                    x_tol_err_pos = 40
                     y_tol_err = 10 # tolerated y error
 
                     # from serial_pub_nocv import yolo_serial
@@ -236,7 +237,7 @@ def run(
                     y_err = y_cp_det - y_cp_sp
                     
 
-                    if cls == 1 and conf >= 0.90 and -x_tol_err < x_err < x_tol_err:
+                    if cls == 1 and conf >= 0.90 and -x_tol_err_neg < x_err < x_tol_err_pos:
                         # yolo_ser = yolo_serial(x_cp_det, y_cp_det, x_cp_sp, y_cp_sp)
                        # x_err = x_cp_det - x_cp_sp
                        # y_err = y_cp_det - y_cp_sp
