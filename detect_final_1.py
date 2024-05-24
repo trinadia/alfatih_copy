@@ -250,7 +250,10 @@ def run(
                         print("Error: (%g, %g)\n" % (x_err, y_err))
                         
                         try:
-                            ser.write(str(1).encode())
+                            #ser.write(str(1).encode())
+                            ser.write(f'{10}\n'.encode('utf-8'))
+                            
+                            time.sleep(1)
 
                             ser.close()
 
