@@ -237,7 +237,7 @@ def run(
                     y_err = y_cp_det - y_cp_sp
                     
 
-                    if cls == 1 and conf >= 0.90 and -x_tol_err_neg < x_err < x_tol_err_pos:
+                    if cls == 1 and conf >= 0.90 and -x_tol_err_pos < x_err < x_tol_err_neg:
                         # yolo_ser = yolo_serial(x_cp_det, y_cp_det, x_cp_sp, y_cp_sp)
                        # x_err = x_cp_det - x_cp_sp
                        # y_err = y_cp_det - y_cp_sp
