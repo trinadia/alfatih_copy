@@ -261,7 +261,7 @@ def run(
                         except Exception as e:
                             print("Error:", str(e))
 
-                        time.sleep(5)
+                        time.sleep(1)
                     else:
                         try:
                             #ser.write(str(1).encode())
