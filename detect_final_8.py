@@ -261,6 +261,19 @@ def run(
                             print("Error:", str(e))
 
                         time.sleep(5)
+                    else:
+                        try:
+                            #ser.write(str(1).encode())
+                            ser.write(f'{0}\n'.encode('utf-8'))
+                            
+                            time.sleep(0.2)
+
+                            ser.close()
+
+                        except Exception as e:
+                            print("Error:", str(e))
+
+                        
                     # Object 1: Class 0, Confidence: 0.19391992688179016, Coordinates: (2, 0), (146, 480)
                     # Object 1: Class 1, Confidence: 0.9494297504425049, Coordinates: (246, 222), (430, 476)
                     # Classes: 0 (dummy), 1 (real)
