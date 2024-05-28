@@ -251,7 +251,8 @@ def run(
                         
                         try:
                             #ser.write(str(1).encode())
-                            ser.write(f'{1}\n'.encode('utf-8'))
+                            ser.write(f'{3}\n'.encode('utf-8'))
+                            print("serial sent: 3 (detected)")
                             
                             time.sleep(0.2)
 
@@ -264,7 +265,8 @@ def run(
                     else:
                         try:
                             #ser.write(str(1).encode())
-                            ser.write(f'{0}\n'.encode('utf-8'))
+                            ser.write(f'{1}\n'.encode('utf-8'))
+                            print("serial sent: 1 (none)")
                             
                             time.sleep(0.2)
 
