@@ -223,7 +223,7 @@ def run(
                     print(f"Object {i+1}: Class {int(cls)}, Confidence: {conf}, Coordinates: ({x1}, {y1}), ({x2}, {y2})")
 
                     x_tol_err_neg = 50 # tolerated x error
-                    x_tol_err_pos = 100
+                    x_tol_err_pos = 120
                     y_tol_err = 10 # tolerated y error
 
                     # from serial_pub_nocv import yolo_serial
